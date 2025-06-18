@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Bakery - Menu</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="home-link" href="csslayout.html">Home</a></li>
+                <li><a id="menu-link" href="menu.html">Menu</a></li>
+                <li><a href="csslayout.html"><img src="images/logo.png" alt="Artisan Bakery Logo" style="height:50px;"></a></li>
+                <li><a id="locations-link" href="locations.html">Locations</a></li>
+                <li><a id="contact-link" href="contact.html">Contact</a></li>
+
+            </ul>
+        </nav>
+        <h1>Our Menu <span class="audio-icon" onclick="speakText()">🔊</span></h1>
+    </header>
+    
+    <section class="menu-items">
+        <div class="item">
+            <img src="images/cake.jpg" alt="Chocolate Cake">
+            <h2>Chocolate Cake</h2>
+            <p>Rich and creamy chocolate cake.</p>
+            <p>Price: $10</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+        
+        <div class="item">
+            <img src="images/croissant.jpg" alt="Croissant">
+            <h2>Butter Croissant</h2>
+            <p>Flaky and buttery French pastry.</p>
+            <p>Price: $5</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="images/muffin.jpg" alt="Blueberry Muffin">
+            <h2>Blueberry Muffin</h2>
+            <p>Soft muffin filled with blueberries.</p>
+            <p>Price: $4</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="images/tart.jpg" alt="Fruit Tart">
+            <h2>Fruit Tart</h2>
+            <p>Fresh fruit on a crispy crust.</p>
+            <p>Price: $6</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="images/donut.jpg" alt="Donut">
+            <h2>Glazed Donut</h2>
+            <p>Soft and fluffy glazed donut.</p>
+            <p>Price: $3</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+
+        <div class="item">
+            <img src="images/baguette.jpg" alt="Baguette">
+            <h2>French Baguette</h2>
+            <p>Crunchy and soft inside.</p>
+            <p>Price: $7</p>
+            <label>Quantity:</label>
+            <select class="dropdown">
+                <option>1</option><option>2</option><option>3</option>
+            </select>
+            <label>Sweetener:</label>
+            <select class="dropdown">
+                <option>Sugar</option><option>Jaggery</option><option>Sugar-Free</option>
+            </select>
+            <button onclick="placeOrder()">Order</button>
+        </div>
+    </section>
+    
+    
+    <footer>
+        123 Main Street, Kozhikode | Contact: 999-999-9999 | Email: f@sna.com
+    </footer>
+
+    <script>
+        function placeOrder() {
+            alert("Order has been placed!");
+        }
+    </script>
+
+<script>
+    document.addEventListener("keydown", function(event) {
+        if (event.key === "ArrowLeft") {
+            // Navigate to previous page
+            window.location.href = "csslayout.html"; // Change based on current page
+        } 
+        else if (event.key === "ArrowRight") {
+            // Navigate to next page
+            window.location.href = "locations.html"; // Change based on current page
+        }
+    });
+</script>
+
+<script>
+    function speakText() {
+        let text = document.getElementById("menuText").innerText;
+        if ('speechSynthesis' in window) {
+            let speech = new SpeechSynthesisUtterance(text);
+            speech.lang = 'en-US'; // Set language
+            speech.rate = 1; // Speed (0.5 slow, 1 normal, 1.5 fast)
+            speech.pitch = 1; // Pitch adjustment
+            window.speechSynthesis.speak(speech);
+        } else {
+            alert("Speech synthesis is not supported in this browser.");
+        }
+    }
+</script>
+
+</body>
+</html>
