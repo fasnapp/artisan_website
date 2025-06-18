@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Bakery - Locations</title>
+    <link rel="stylesheet" href="styles.css">
+    
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a id="home-link" href="csslayout.html">Home</a></li>
+                    <li><a id="menu-link" href="menu.html">Menu</a></li>
+
+                    <li><a href="csslayout.html"><img src="images/logo.png" alt="Artisan Bakery Logo" style="height:50px;"></a></li>
+                    <li><a id="locations-link" href="locations.html">Locations</a></li>
+                    <li><a id="contact-link" href="contact.html">Contact</a></li>
+
+                </ul>
+            </nav>
+            <h1>Our Locations</h1>
+        </header>
+        
+        <section class="locations">
+            <div class="location">
+                <h2>Main Branch - Kozhikode</h2>
+                <p>123 Main Street, Kozhikode</p>
+                <p>Phone: 999-999-9999</p>
+                <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+            </div>
+    
+            <div class="location">
+                <h2>City Mall Outlet</h2>
+                <p>City Mall, Downtown Kozhikode</p>
+                <p>Phone: 888-888-8888</p>
+                <iframe src="https://www.google.com/maps/embed?..." allowfullscreen></iframe>
+            </div>
+        </section>
+        
+        <footer>
+            123 Main Street, Kozhikode | Contact: 999-999-9999 | Email: f@sna.com
+        </footer>
+
+        <script>
+            document.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowLeft") {
+                    // Navigate to previous page
+                    window.location.href = "menu.html"; // Change based on current page
+                } 
+                else if (event.key === "ArrowRight") {
+                    // Navigate to next page
+                    window.location.href = "contact.html"; // Change based on current page
+                }
+            });
+        </script>
+        
+    </body>
+    </html>
